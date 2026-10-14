@@ -53,7 +53,7 @@
         'interested in doing hard things' + (nameVal ? ' - ' + nameVal : '')
       );
       var body    = encodeURIComponent(message ? message.value : '');
-      window.location.href = 'mailto:support@lkdhinnovations.com?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:contact@lkdhinnovations.com?subject=' + subject + '&body=' + body;
 
       if (btn) btn.textContent = 'Sent';
     });
