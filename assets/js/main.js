@@ -1,4 +1,4 @@
-// main.js — lkinnovations.org
+// main.js — lkdhinnovations.com
 // Stylesheet loader, social links, contact form.
 
 (function () {
