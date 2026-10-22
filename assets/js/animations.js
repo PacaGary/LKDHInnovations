@@ -1,4 +1,4 @@
-// animations.js — lkinnovations.org
+// animations.js — lkdhinnovations.com
 // Hero entrance, scroll reveals, image parallax, stories pinned parallax.
 
 (function () {
