@@ -2450,10 +2450,9 @@ body.fouc-guard {
 }
  
 .site-footer {
-  background: var(--black-a50);
-  backdrop-filter: blur(3px) saturate(130%);
-  -webkit-backdrop-filter: blur(3px) saturate(130%);
-  border: 1px solid var(--white-a20);
+  background-color: var(--color-black);
+  background-image: var(--dot-dark);
+  box-shadow: 0 20px 50px var(--black-a20);
   margin: 0 4vw 0vw;
   bottom: 4vw;
   position: relative;
@@ -2488,7 +2487,6 @@ body.fouc-guard {
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
   color: var(--color-white);
-  text-shadow: 0 1px 2px var(--black-a30);
   margin-bottom: var(--space-sm);
 }
 
@@ -2496,8 +2494,7 @@ body.fouc-guard {
   font-family: var(--font-display);
   font-size: var(--text-body);
   font-weight: var(--weight-regular);
-  color: var(--white-a95);
-  text-shadow: 0 1px 2px var(--black-a30);
+  color: var(--white-a85);
   letter-spacing: var(--tracking-slight);
   transition: color var(--dur-fast);
   display: inline-block;
@@ -2520,15 +2517,14 @@ body.fouc-guard {
   width: 36px;
   height: 36px;
   border: 1px solid var(--white-a40);
-  color: var(--white-a95);
+  color: var(--white-a85);
   transition: color var(--dur-fast), border-color var(--dur-fast), background var(--dur-fast);
   flex-shrink: 0;
 }
 
 .footer-social-icon:hover {
   color: var(--color-white);
-  border-color: var(--white-a40);
-  background: var(--white-a06);
+  border-color: var(--color-white);
 }
 
 .footer-social-icon svg {
@@ -2551,8 +2547,7 @@ body.fouc-guard {
 .footer-copy {
   font-size: var(--text-meta);
   font-weight: var(--weight-regular);
-  color: var(--color-white);
-  text-shadow: 0 1px 2px var(--black-a30);
+  color: var(--white-a70);
   letter-spacing: var(--tracking-slight);
 }
 
@@ -2564,8 +2559,7 @@ body.fouc-guard {
 .footer-legal a {
   font-size: var(--text-meta);
   font-weight: var(--weight-regular);
-  color: var(--color-white);
-  text-shadow: 0 1px 2px var(--black-a30);
+  color: var(--white-a70);
   letter-spacing: var(--tracking-slight);
   transition: color var(--dur-fast);
 }
