@@ -34,6 +34,7 @@
   --color-muted:      #6b6b6b;
   --color-ink:        #333333;
   --color-divider:    var(--color-silver-lt);
+  --silver-linear: linear-gradient(90deg, var(--color-silver-lt) 0%, var(--color-white) 30%, var(--color-silver) 60%, var(--color-silver-dk) 100%);
 
   /* — Dark surfaces — */
   --surface-dark:   #080808;
@@ -71,6 +72,7 @@
     var(--reyou-gold-lt) 0%, var(--reyou-gold-hi) 20%, var(--reyou-gold) 40%,
     var(--reyou-gold-warm) 60%, var(--reyou-gold-dk) 80%, var(--reyou-gold-lt) 100%
   );
+  --reyou-gold-linear: linear-gradient(90deg, var(--reyou-gold-lt) 0%, var(--reyou-gold-hi) 30%, var(--reyou-gold) 60%, var(--reyou-gold-dk) 100%);
 
   /* — Pacagen brand — */
   --pacagen-navy:   #032d70;
@@ -866,6 +868,20 @@ body.fouc-guard {
   border-radius: var(--radius-pill);
 }
 
+.btn-LKDH--light {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.btn-LKDH--light::after {
+  background: var(--color-white);
+}
+
+.btn-LKDH--light:hover {
+  color: var(--color-black);
+  border-color: var(--color-white);
+}
+
 /* Info drawer — reuses .mobile-drawer backdrop + .drawer-panel slide mechanics */
 #info-drawer {
   z-index: var(--z-info-drawer);
@@ -910,7 +926,7 @@ body.fouc-guard {
 .info-drawer-body {
   font-family: var(--font-display);
   font-size: var(--text-body);
-  color: var(--white-a70);
+  color: var(--white-a80);
   line-height: var(--lh-prose);
 }
 
@@ -924,11 +940,10 @@ body.fouc-guard {
   display: inline-block;
   font-family: var(--font-display);
   font-size: var(--text-label);
-  font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-wider);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  padding: 0.3rem 0.75rem;
-  border-radius: var(--radius-pill);
+  padding: 0.25rem 0.75rem;
   border: 1px solid var(--white-a20);
   color: var(--white-a70);
 }
@@ -1199,7 +1214,7 @@ body.fouc-guard {
 
 .reyou-section .brand-cta:hover {
   border-color: transparent;
-  background: linear-gradient(90deg, var(--reyou-gold-lt) 0%, var(--reyou-gold-hi) 30%, var(--reyou-gold) 60%, var(--reyou-gold-dk) 100%);
+  background: var(--reyou-gold-linear);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -2111,6 +2126,18 @@ body.fouc-guard {
   border: 1px solid var(--pacagen-blue);
 }
 
+.story-modal-product-badge--gold {
+  background: var(--reyou-gold-linear);
+  color: var(--color-black);
+  border: 1px solid var(--reyou-gold-dk);
+}
+
+.story-modal-product-badge--silver {
+  background: var(--silver-linear);
+  color: var(--color-black);
+  border: 1px solid var(--color-silver-dk);
+}
+
 .story-modal-name {
   font-family: var(--font-display);
   font-weight: var(--weight-bold);
@@ -2292,6 +2319,89 @@ body.fouc-guard {
 
 @media (prefers-reduced-motion: reduce) {
   .institutions-track { animation-play-state: paused; }
+}
+
+/* Research fellowships: reuses the Team section shell and header styles. */
+.fellowships-section {
+  background-image: var(--dot-dark);
+  border-top: 1px solid var(--white-a10);
+  padding-bottom: var(--space-2xl);
+}
+
+.fellowships-section .raise-bar-body {
+  max-width: 40rem;
+  margin: var(--space-md) auto 0;
+  color: var(--white-a70);
+}
+
+.fellowships-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-lg);
+  padding: 0 var(--section-x);
+}
+
+.fellowship-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--surface-raised);
+  border: 1px solid var(--white-a20);
+  transition: border-color var(--dur-base);
+}
+
+.fellowship-card:hover {
+  border-color: var(--white-a40);
+}
+
+.fellowship-card .story-modal-product-badge {
+  align-self: flex-start;
+  margin-bottom: 0;
+}
+
+.fellowship-card-title {
+  font-size: var(--text-section-sm);
+  font-weight: var(--weight-extrabold);
+}
+
+.fellowship-card-title a {
+  transition: color var(--dur-fast);
+}
+
+.fellowship-card-title a:hover {
+  color: var(--white-a70);
+}
+
+.fellowship-card ul {
+  flex: 1;
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.fellowship-card strong {
+  color: var(--color-white);
+}
+
+.fellowship-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.fellowship-card-actions .btn-LKDH {
+  flex: 1;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .fellowships-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .fellowship-card {
+    padding: var(--space-md);
+  }
 }
 
 /* ============================================================
