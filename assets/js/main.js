@@ -47,7 +47,6 @@
         return;
       }
 
-      // Mailto fallback — replace with real form endpoint when available
       var nameVal = name ? name.value.trim() : '';
       var subject = encodeURIComponent(
         'interested in doing hard things' + (nameVal ? ' - ' + nameVal : '')
